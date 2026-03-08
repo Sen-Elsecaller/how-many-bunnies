@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dx7fyr4eori0"
+path="res://.godot/imported/Cuddle Clouds.wav-1bce7663fae6e02f1fba326c84f6781d.sample"
+
+[deps]
+
+source_file="res://assets/ost/Cuddle Clouds.wav"
+dest_files=["res://.godot/imported/Cuddle Clouds.wav-1bce7663fae6e02f1fba326c84f6781d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

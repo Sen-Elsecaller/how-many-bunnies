@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cq3puutqb7ptd"]
+
+[ext_resource type="Script" uid="uid://bxpb768k8ofbj" path="res://scripts/actors/bunny/BunnyHouse.cs" id="1_f1nvg"]
+
+[node name="BunnyHouse" type="Node2D" unique_id=252430772]
+script = ExtResource("1_f1nvg")

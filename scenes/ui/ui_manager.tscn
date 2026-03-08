@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://b1tufwl8x2g54"]
+
+[ext_resource type="Script" uid="uid://cm4ri6jlk25i7" path="res://scripts/ui/UIManager.cs" id="1_rwj1f"]
+[ext_resource type="Script" uid="uid://i8wyp5k1q0ts" path="res://scripts/ui/GameUI.cs" id="2_reske"]
+[ext_resource type="Script" uid="uid://m7i4kk8gnnn" path="res://scripts/ui/UpgradesMenu.cs" id="3_j2mt3"]
+[ext_resource type="Theme" uid="uid://glsv1nrakjvy" path="res://resources/themes/main_menu.tres" id="3_ybivm"]
+[ext_resource type="Texture2D" uid="uid://dgg02cc02q5ww" path="res://assets/background/nightsky_pixel.png" id="4_gl862"]
+[ext_resource type="PackedScene" uid="uid://mvqu54jvitic" path="res://scenes/ui/upgrade_tree.tscn" id="4_j2mt3"]
+[ext_resource type="Texture2D" uid="uid://3p7uj7qir50j" path="res://assets/bunny/bunny1.png" id="5_ixhu3"]
+
+[node name="UIManager" type="CanvasLayer" unique_id=665702757]
+script = ExtResource("1_rwj1f")
+
+[node name="GameUI" type="Control" parent="." unique_id=448434143]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_reske")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameUI" unique_id=808041133]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="GameUI/MarginContainer" unique_id=1248803105]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+theme = ExtResource("3_ybivm")
+
+[node name="TimeLabel" type="Label" parent="GameUI/MarginContainer/Panel" unique_id=945618975]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -14.5
+offset_right = 39.5
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_ybivm")
+theme_override_font_sizes/font_size = 64
+text = "30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PauseMenu" type="Control" parent="." unique_id=2090948413]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="UpgradesMenu" type="Control" parent="." unique_id=353875742]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_j2mt3")
+
+[node name="BackGround" type="TextureRect" parent="UpgradesMenu" unique_id=1259164084]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_gl862")
+
+[node name="UpgradeTree" parent="UpgradesMenu" unique_id=797856293 instance=ExtResource("4_j2mt3")]
+layout_mode = 1
+
+[node name="NewDayButton" type="Button" parent="UpgradesMenu" unique_id=1135898039]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 80)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("3_ybivm")
+theme_override_font_sizes/font_size = 25
+text = "Empezar dia"
+
+[node name="CounterContainer" type="MarginContainer" parent="UpgradesMenu" unique_id=1424530258]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Panel" type="Panel" parent="UpgradesMenu/CounterContainer" unique_id=2078497243]
+layout_mode = 2
+theme = ExtResource("3_ybivm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UpgradesMenu/CounterContainer" unique_id=1417593720]
+layout_mode = 2
+
+[node name="BunnyIcon" type="TextureRect" parent="UpgradesMenu/CounterContainer/VBoxContainer" unique_id=2091415765]
+layout_mode = 2
+texture = ExtResource("5_ixhu3")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="BunnyCounter" type="Label" parent="UpgradesMenu/CounterContainer/VBoxContainer" unique_id=2113873204]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_ybivm")
+theme_override_font_sizes/font_size = 30
+text = "0000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1221016306]

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bs63yane0u2gv"]
+
+[ext_resource type="Script" uid="uid://dmluhbkvtvoif" path="res://scripts/actors/carrot/CarrotCrop.cs" id="1_jmflg"]
+[ext_resource type="Texture2D" uid="uid://b1jlock3qq156" path="res://assets/crops/carrot1.png" id="2_p63xb"]
+[ext_resource type="Texture2D" uid="uid://g4fers5ek740" path="res://assets/crops/carrot2.png" id="3_fmheg"]
+[ext_resource type="Texture2D" uid="uid://iinwrgxsp5is" path="res://assets/crops/carrot3.png" id="4_hb4kh"]
+[ext_resource type="PackedScene" uid="uid://b7aav81xfxiwg" path="res://scenes/carrots/carrot_edible.tscn" id="5_fmheg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fmheg"]
+radius = 16.0
+
+[node name="CarrotCrop" type="Node2D" unique_id=749147814]
+script = ExtResource("1_jmflg")
+GrowthTime = 1.0
+Stage1Texture = ExtResource("2_p63xb")
+Stage2Texture = ExtResource("3_fmheg")
+Stage3Texture = ExtResource("4_hb4kh")
+CarrotEdibleScene = ExtResource("5_fmheg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1536087695]
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=2011148224]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=727418384]
+shape = SubResource("CircleShape2D_fmheg")

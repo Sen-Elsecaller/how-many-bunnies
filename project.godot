@@ -1,0 +1,60 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="How Many Bunnies"
+run/main_scene="uid://b1dncea1khn00"
+config/features=PackedStringArray("4.6", "C#", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://jajv46p1ejj3"
+Utils="*uid://b51lwce8xv751"
+ShaderManager="*uid://y3ytpop07ciq"
+BunniesManager="*uid://cuypp4yaevjax"
+TooltipManager="*uid://6114dmsyg7ys"
+AudioManager="*uid://ceje50yku7oyk"
+
+[display]
+
+mouse_cursor/custom_image="uid://bp7yixuwly3np"
+
+[dotnet]
+
+project/assembly_name="How Many Bunnies"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://resources/": "yellow",
+"res://scenes/": "green",
+"res://scripts/": "blue"
+}
+
+[global_group]
+
+Bunnies=""
+
+[layer_names]
+
+2d_physics/layer_1="Bunnies"
+2d_physics/layer_2="Carrots"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://cc28m0ma7ojda"]
+
+[ext_resource type="Texture2D" uid="uid://ddb135vvpqmcb" path="res://assets/upgrades/BunnySpeed.png" id="1_dbv2t"]
+[ext_resource type="Script" uid="uid://cdv4hr4cbkp80" path="res://util/types/UpgradeData.cs" id="2_n8s0p"]
+
+[resource]
+script = ExtResource("2_n8s0p")
+Id = "bunny_speed_1"
+DisplayName = "Velocito"
+Description = "Conejos go brrr"
+Cost = 1
+Icon = ExtResource("1_dbv2t")
+EffectType = 3
+EffectValue = 10.0
+metadata/_custom_type_script = "uid://cdv4hr4cbkp80"

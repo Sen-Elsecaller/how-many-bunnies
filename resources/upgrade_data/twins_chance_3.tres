@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://b8di4ki7pb082"]
+
+[ext_resource type="Texture2D" uid="uid://cvukp3hx28qhi" path="res://assets/upgrades/Twinchance.png" id="1_yoe3y"]
+[ext_resource type="Script" uid="uid://cdv4hr4cbkp80" path="res://util/types/UpgradeData.cs" id="2_ini7x"]
+
+[resource]
+script = ExtResource("2_ini7x")
+Id = "twinschance_3"
+DisplayName = "Crias x2 3"
+Description = "Incrementa la probabilidad de que una pareja de conejos tenga el doble de crias"
+Cost = 50
+Icon = ExtResource("1_yoe3y")
+EffectType = 1
+EffectValue = 20.0
+metadata/_custom_type_script = "uid://cdv4hr4cbkp80"

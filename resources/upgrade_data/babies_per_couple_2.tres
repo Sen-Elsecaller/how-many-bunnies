@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://8cwe1c5f1x6a"]
+
+[ext_resource type="Texture2D" uid="uid://nue3q2cl3svl" path="res://assets/upgrades/BabiesPerCouple.png" id="1_7os2u"]
+[ext_resource type="Script" uid="uid://cdv4hr4cbkp80" path="res://util/types/UpgradeData.cs" id="2_m7gkf"]
+
+[resource]
+script = ExtResource("2_m7gkf")
+Id = "babiespercouple_2"
+DisplayName = "Mas crias"
+Description = "Cada pareja genera MUCHAS MAS CRIAS"
+Cost = 100
+Icon = ExtResource("1_7os2u")
+EffectType = 2
+EffectValue = 2.0
+metadata/_custom_type_script = "uid://cdv4hr4cbkp80"

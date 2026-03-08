@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SoundEffect" format=3]
+
+[ext_resource type="AudioStream" path="res://assets/sfx/upgrade3.wav" id="1"]
+[ext_resource type="Script" uid="uid://d0cawubh8xv4v" path="res://util/types/SoundEffect.cs" id="2"]
+
+[resource]
+script = ExtResource("2")
+Type = 6
+Stream = ExtResource("1")
+MaxSimultaneous = 10
+metadata/_custom_type_script = "uid://d0cawubh8xv4v"

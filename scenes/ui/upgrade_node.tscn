@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cphlb7pah0cg8"]
+
+[ext_resource type="Script" uid="uid://df0kl1m2m5o3j" path="res://scripts/upgrades/UpgradeNode.cs" id="1_o6dpi"]
+[ext_resource type="Texture2D" uid="uid://nue3q2cl3svl" path="res://assets/upgrades/BabiesPerCouple.png" id="2_o6dpi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6dpi"]
+bg_color = Color(0.9098039, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="UpgradeNode" type="Control" unique_id=1519265010]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o6dpi")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1359914368]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="MarginContainer" unique_id=329308861]
+layout_mode = 2
+flat = true
+
+[node name="BGPanel" type="Panel" parent="MarginContainer/Button" unique_id=56899630]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o6dpi")
+
+[node name="UpgradeTexture" type="TextureRect" parent="MarginContainer/Button" unique_id=1418772490]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_o6dpi")
+expand_mode = 1
+stretch_mode = 5

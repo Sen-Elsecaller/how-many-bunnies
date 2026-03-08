@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d0fbh1u46481w"]
+
+[ext_resource type="Script" uid="uid://bl1yqyb5ue8q7" path="res://scripts/BunnyBounds.cs" id="1_swswr"]
+
+[node name="BunnyBounds" type="Polygon2D" unique_id=487842066]
+color = Color(1, 1, 1, 0.09019608)
+offset = Vector2(-32, -26)
+polygon = PackedVector2Array(619, 339, 757, 339, 759, 387, -398, 392, -396, -98, -206, -97, -205, -74, -181, -73, -178, -97, 755, -98, 759, 152, 622, 158)
+script = ExtResource("1_swswr")

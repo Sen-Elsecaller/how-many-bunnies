@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://dge3ksxq2e7jm"]
+
+[ext_resource type="AudioStream" uid="uid://2e2wxr01powe" path="res://assets/sfx/confirm1.wav" id="1_87hlr"]
+[ext_resource type="Script" uid="uid://d0cawubh8xv4v" path="res://util/types/SoundEffect.cs" id="2_8bhc0"]
+
+[resource]
+script = ExtResource("2_8bhc0")
+Type = 1
+Stream = ExtResource("1_87hlr")
+MaxSimultaneous = 10
+metadata/_custom_type_script = "uid://d0cawubh8xv4v"

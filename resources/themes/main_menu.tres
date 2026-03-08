@@ -1,0 +1,35 @@
+[gd_resource type="Theme" format=3 uid="uid://glsv1nrakjvy"]
+
+[ext_resource type="FontFile" uid="uid://ct35qa25648be" path="res://assets/fonts/BubblegumSans-Regular.ttf" id="1_b3dl3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mn4bo"]
+bg_color = Color(0.2901961, 0.21568628, 0.15686275, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.18039216, 0.12156863, 0.078431375, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ori1h"]
+bg_color = Color(0.3647059, 0.2509804, 0.21568628, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.24313726, 0.15294118, 0.13725491, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[resource]
+default_font = ExtResource("1_b3dl3")
+Button/font_sizes/font_size = 36
+Button/styles/hover = SubResource("StyleBoxFlat_mn4bo")
+Button/styles/normal = SubResource("StyleBoxFlat_mn4bo")
+Button/styles/pressed = SubResource("StyleBoxFlat_mn4bo")
+Panel/styles/panel = SubResource("StyleBoxFlat_ori1h")

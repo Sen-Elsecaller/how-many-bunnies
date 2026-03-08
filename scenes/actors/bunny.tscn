@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://cthght2wgfni"]
+
+[ext_resource type="Texture2D" uid="uid://bd35dlulv84p1" path="res://assets/bunny/bunny idle.png" id="1_0sl5a"]
+[ext_resource type="Script" uid="uid://754u5lun413l" path="res://scripts/actors/bunny/Bunny.cs" id="1_ggkmg"]
+[ext_resource type="Texture2D" uid="uid://dqvpdrnt4kx88" path="res://assets/bunny/bunny.png" id="3_5g1bf"]
+[ext_resource type="Script" uid="uid://dmdx0niugimco" path="res://scripts/actors/bunny/BunnyStateMachine.cs" id="3_l787c"]
+[ext_resource type="Script" uid="uid://cd8vsrwpyhl67" path="res://scripts/actors/bunny/states/BunnyIdleState.cs" id="4_qchqy"]
+[ext_resource type="Script" uid="uid://c8ys40i82w822" path="res://scripts/actors/bunny/states/BunnyWanderingState.cs" id="5_mfjs7"]
+[ext_resource type="Script" uid="uid://bhl8yc1hjfqxq" path="res://scripts/actors/bunny/states/BunnyWatchingState.cs" id="6_qchqy"]
+[ext_resource type="Script" uid="uid://b8axjb14knw5f" path="res://scripts/actors/bunny/states/BunnyEatingState.cs" id="7_mfjs7"]
+[ext_resource type="Script" uid="uid://cmt82v4r5rf0v" path="res://scripts/actors/bunny/states/BunnyGoingToCarrotState.cs" id="8_mfjs7"]
+[ext_resource type="Script" uid="uid://mkkr6rkdyclm" path="res://scripts/actors/bunny/states/BunnySleepingState.cs" id="9_wqkoa"]
+[ext_resource type="Script" uid="uid://drp7hvcjxkua6" path="res://scripts/actors/bunny/states/BunnyGoingToSleepState.cs" id="10_5g1bf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qn21b"]
+atlas = ExtResource("1_0sl5a")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovlj1"]
+atlas = ExtResource("1_0sl5a")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdyof"]
+atlas = ExtResource("1_0sl5a")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggkmg"]
+atlas = ExtResource("1_0sl5a")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84m58"]
+atlas = ExtResource("3_5g1bf")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_su7q7"]
+atlas = ExtResource("3_5g1bf")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njtq1"]
+atlas = ExtResource("3_5g1bf")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_na01y"]
+atlas = ExtResource("3_5g1bf")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ctrq"]
+atlas = ExtResource("3_5g1bf")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sx2u5"]
+atlas = ExtResource("3_5g1bf")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l787c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qn21b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovlj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdyof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggkmg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84m58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_su7q7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njtq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_na01y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ctrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sx2u5")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ggkmg"]
+radius = 43.046486
+
+[node name="Bunny" type="Node2D" unique_id=1987173722 groups=["Bunnies"]]
+script = ExtResource("1_ggkmg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1052357485]
+modulate = Color(1.2742168, 1.2742168, 1.2742168, 1)
+sprite_frames = SubResource("SpriteFrames_l787c")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="BunnyStateMachine" type="Node" parent="." unique_id=1484938025 node_paths=PackedStringArray("InitialState")]
+script = ExtResource("3_l787c")
+InitialState = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="BunnyStateMachine" unique_id=1233227013]
+script = ExtResource("4_qchqy")
+
+[node name="Wandering" type="Node" parent="BunnyStateMachine" unique_id=1704154677]
+script = ExtResource("5_mfjs7")
+
+[node name="Watching" type="Node" parent="BunnyStateMachine" unique_id=932631944]
+script = ExtResource("6_qchqy")
+
+[node name="Eating" type="Node" parent="BunnyStateMachine" unique_id=1204134606]
+script = ExtResource("7_mfjs7")
+
+[node name="GoingToCarrot" type="Node" parent="BunnyStateMachine" unique_id=1604254362]
+script = ExtResource("8_mfjs7")
+
+[node name="Sleeping" type="Node" parent="BunnyStateMachine" unique_id=1297223180]
+script = ExtResource("9_wqkoa")
+
+[node name="GoingToSleep" type="Node" parent="BunnyStateMachine" unique_id=1021653260]
+script = ExtResource("10_5g1bf")
+
+[node name="CarrotDetection" type="Area2D" parent="." unique_id=1057185340 groups=["Bunnies"]]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarrotDetection" unique_id=1336914742]
+position = Vector2(1, 8)
+shape = SubResource("CircleShape2D_ggkmg")

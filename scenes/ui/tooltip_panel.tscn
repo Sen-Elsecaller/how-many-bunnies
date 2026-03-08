@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://80cgp32x8ot1"]
+
+[ext_resource type="Script" uid="uid://didu8pedbptnw" path="res://scripts/ui/TooltipPanel.cs" id="1_jiqmh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d83da"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.62967473, 0.62967485, 0.62967443, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="TooltipPanel" type="PanelContainer" unique_id=1549581002]
+custom_minimum_size = Vector2(240, 120)
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_d83da")
+script = ExtResource("1_jiqmh")
+
+[node name="Label" type="RichTextLabel" parent="." unique_id=567054382]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 60)
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true

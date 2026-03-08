@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bgv1mfkw2dgtb"]
+
+[ext_resource type="Script" uid="uid://cqr75bvw2ioco" path="res://scripts/actors/carrot/CarrotField.cs" id="1_yn1nk"]
+[ext_resource type="PackedScene" uid="uid://bs63yane0u2gv" path="res://scenes/carrots/carrot_crop.tscn" id="2_wm4np"]
+
+[node name="CarrotField" type="Node2D" unique_id=1980614102]
+script = ExtResource("1_yn1nk")
+CarrotCropScene = ExtResource("2_wm4np")
+RespawnDelay = 1.0
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=180385253]
+position = Vector2(116, 0)
+
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=1033159311]
+position = Vector2(-106, 0)
+
+[node name="Marker2D3" type="Marker2D" parent="." unique_id=1753231239]

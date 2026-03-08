@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://mvqu54jvitic"]
+
+[ext_resource type="Script" uid="uid://c5i5ctmkupeam" path="res://scripts/upgrades/UpgradeTree.cs" id="1_rgrb3"]
+[ext_resource type="PackedScene" uid="uid://cphlb7pah0cg8" path="res://scenes/ui/upgrade_node.tscn" id="2_x6bdh"]
+[ext_resource type="Resource" uid="uid://ba4063h5e5dg5" path="res://resources/upgrade_data/twins_chance.tres" id="3_4754d"]
+[ext_resource type="Resource" uid="uid://chk2waxquu7nm" path="res://resources/upgrade_data/babies_per_couple_3.tres" id="3_mcknv"]
+[ext_resource type="Resource" uid="uid://dywgww2ca0i5k" path="res://resources/upgrade_data/bunny_speed_3.tres" id="4_4754d"]
+[ext_resource type="Resource" uid="uid://cc28m0ma7ojda" path="res://resources/upgrade_data/bunny_speed.tres" id="4_hg65t"]
+[ext_resource type="Resource" uid="uid://8cwe1c5f1x6a" path="res://resources/upgrade_data/babies_per_couple_2.tres" id="5_hg65t"]
+[ext_resource type="Resource" uid="uid://bj17u7x7d2qtt" path="res://resources/upgrade_data/babies_per_couple.tres" id="5_v4tkg"]
+[ext_resource type="Resource" uid="uid://b8di4ki7pb082" path="res://resources/upgrade_data/twins_chance_3.tres" id="6_3hyf5"]
+[ext_resource type="Resource" uid="uid://dh85co143oajp" path="res://resources/upgrade_data/bunny_speed_2.tres" id="9_5k0ed"]
+[ext_resource type="Resource" uid="uid://bg26qqiq6m5o6" path="res://resources/upgrade_data/twins_chance_2.tres" id="10_y8dw8"]
+
+[node name="UpgradeTree" type="Control" unique_id=797856293]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rgrb3")
+
+[node name="UpgradeNode" parent="." unique_id=1519265010 instance=ExtResource("2_x6bdh")]
+layout_mode = 1
+offset_left = -382.0
+offset_top = 167.0
+offset_right = -322.0
+offset_bottom = 227.0
+Data = ExtResource("5_v4tkg")
+
+[node name="UpgradeNode" parent="UpgradeNode" unique_id=1264606749 instance=ExtResource("2_x6bdh")]
+layout_mode = 1
+offset_left = 105.0
+offset_top = -30.0
+offset_right = 165.0
+offset_bottom = 30.0
+Data = ExtResource("4_hg65t")
+
+[node name="UpgradeNode" parent="UpgradeNode/UpgradeNode" unique_id=1481342907 instance=ExtResource("2_x6bdh")]
+layout_mode = 1
+offset_left = 108.0
+offset_top = -30.0
+offset_right = 168.0
+offset_bottom = 30.0
+Data = ExtResource("3_4754d")
+
+[node name="UpgradeNode" parent="UpgradeNode/UpgradeNode/UpgradeNode" unique_id=1618554893 instance=ExtResource("2_x6bdh")]
+layout_mode = 1
+offset_left = 112.0
+offset_top = -30.0
+offset_right = 172.0
+offset_bottom = 30.0
+Data = ExtResource("6_3hyf5")
+
+[node name="UpgradeNode2" parent="UpgradeNode/UpgradeNode/UpgradeNode" unique_id=1238156006 instance=ExtResource("2_x6bdh")]
+layout_mode = 1
+offset_left = -30.0
+offset_top = -150.0
+offset_right = 30.0
+offset_bottom = -90.0
+Data = ExtResource("3_mcknv")
+
+[node name="UpgradeNode2" parent="UpgradeNode" unique_id=412161129 instance=ExtResource("2_x6bdh")]
+layout_mode = 1
+offset_left = -160.0
+offset_top = -30.0
+offset_right = -100.0
+offset_bottom = 30.0
+Data = ExtResource("5_hg65t")
+
+[node name="UpgradeNode3" parent="UpgradeNode" unique_id=2104830587 instance=ExtResource("2_x6bdh")]
+layout_mode = 1
+offset_left = -30.0
+offset_top = -150.0
+offset_right = 30.0
+offset_bottom = -90.0
+Data = ExtResource("9_5k0ed")
+
+[node name="UpgradeNode" parent="UpgradeNode/UpgradeNode3" unique_id=93721332 instance=ExtResource("2_x6bdh")]
+layout_mode = 1
+offset_left = -160.0
+offset_top = -30.0
+offset_right = -100.0
+offset_bottom = 30.0
+Data = ExtResource("10_y8dw8")
+
+[node name="UpgradeNode2" parent="UpgradeNode/UpgradeNode3" unique_id=2047941356 instance=ExtResource("2_x6bdh")]
+layout_mode = 1
+offset_left = -30.0
+offset_top = -133.0
+offset_right = 30.0
+offset_bottom = -73.0
+Data = ExtResource("4_4754d")

@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(move:*)",
+      "Bash(move \"gnorp 2.png\" \"assets/references/\")",
+      "Bash(move \"bunny.png\" \"assets/references/\")",
+      "Bash(move \"black hole 1.jpg\" \"assets/references/\")",
+      "Bash(move \"black hole 2.jpg\" \"assets/references/\")",
+      "Bash(move \"black hole 3.jpg\" \"assets/references/\")",
+      "Bash(dir:*)",
+      "WebFetch(domain:svgmaker.io)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(winget install:*)",
+      "Bash(\"C:\\\\Program Files\\\\ImageMagick-7.1.2-Q16-HDRI\\\\magick.exe\" hand_open.png -resize 50% -filter point hand_open.png)",
+      "Bash(\"C:\\\\Program Files\\\\ImageMagick-7.1.2-Q16-HDRI\\\\magick.exe\" hand_closed.png -resize 50% -filter point hand_closed.png)",
+      "Bash(\"C:\\\\Program Files\\\\ImageMagick-7.1.2-Q16-HDRI\\\\magick.exe\" hand_point.png -resize 50% -filter point hand_point.png)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

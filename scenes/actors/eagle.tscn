@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://inqfy2woxv8o"]
+
+[ext_resource type="Texture2D" uid="uid://dybrj6t45cm5p" path="res://assets/actors/crow.png" id="1_3hk6w"]
+[ext_resource type="Script" uid="uid://bo3a5637xch0d" path="res://scripts/actors/eagle/Eagle.cs" id="1_vdpuw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdpuw"]
+atlas = ExtResource("1_3hk6w")
+region = Rect2(101, 106, 25, 21)
+
+[node name="Eagle" type="Node2D" unique_id=970573855]
+script = ExtResource("1_vdpuw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1717511528]
+texture = SubResource("AtlasTexture_vdpuw")

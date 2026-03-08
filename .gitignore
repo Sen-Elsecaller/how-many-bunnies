@@ -1,0 +1,12 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# .NET/C#
+.mono/
+bin/
+obj/
+
+# OS
+.DS_Store
+Thumbs.db
