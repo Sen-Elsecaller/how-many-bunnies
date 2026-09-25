@@ -1,5 +1,15 @@
 # Proyecto Godot C# - How Many Bunnies
 
+> **El juego se muda a 3D, en un repo nuevo.** Este repo (2D, Godot 4.6) queda como
+> **referencia de lectura**: no se sigue desarrollando acá. Qué se decidió, qué sistema pasa y
+> cuál se rehace: [`port3D.md`](port3D.md). El resto de este archivo describe el código 2D tal
+> como quedó.
+
+## Inicio de Sesión
+
+Leer [`port3D.md`](port3D.md), las últimas entradas de [`bitacora.md`](bitacora.md) —ahí está
+el **por qué** de cada decisión— y [`pendientes-analizar.md`](pendientes-analizar.md).
+
 ## Reglas de Interaccion
 - Be concise. Sacrifice grammar for concision
 - If unsure about GD/C# implementation, search docs online before answering
@@ -8,9 +18,15 @@
 - NO ejecutar proyecto - usuario envia errores de consola
 - Enfoque didactico al escribir C# para familiarizar al usuario
 - Actualizar documentacion (CLAUDE.md) solo cuando mecanicas esten finalizadas, no en primera escritura
+- Cada decisión de diseño o de arquitectura deja su **por qué** en `bitacora.md`. Lo que queda
+  por analizar va a `pendientes-analizar.md` con un id `PA-0XX` que no se reutiliza
 
 ## Documentos del Proyecto
-- `game-design-document.md` - Diseño del juego, mecanicas, decisiones
+- `port3D.md` - La mudanza a 3D: decisiones, la regla de la masa, inventario de sistemas
+- `bitacora.md` - Registro por sesión del por qué de cada decisión, con tags
+- `pendientes-analizar.md` - Necesidades que requieren análisis antes de implementar (`PA-0XX`)
+- `game-design-document.md` - Diseño del juego, mecanicas, decisiones. **Parte quedó
+  desactualizada por la mudanza** (los millones de conejos, el árbol propio): manda `port3D.md`
 - `game-patterns.md` - Patrones de programacion para juegos (referencia)
 - `godot-csharp-guide.md` - Convenciones C#, errores comunes, patrones
 - `shaders-skill.md` - Sistema de shaders y efectos visuales
@@ -31,6 +47,9 @@ how-many-bunnies/
 ├── scenes/                  # Escenas (.tscn)
 ├── util/                    # Utilidades y componentes reutilizables
 ├── CLAUDE.md                # Este archivo (tecnico)
+├── port3D.md                # La mudanza a 3D
+├── bitacora.md              # El por qué de cada decisión, por sesión
+├── pendientes-analizar.md   # Fichas PA-0XX
 ├── game-design-document.md  # Diseño del juego
 ├── game-patterns.md         # Patrones de programacion
 └── shaders-skill.md         # Documentacion de shaders
